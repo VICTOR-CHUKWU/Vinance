@@ -12,11 +12,6 @@ body {
   height: 450px;
 }
 
-/* .nav {
-  width: 100% !important;
-  margin: 0;
-} */
-
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -45,11 +40,11 @@ body {
 }
 
 .min-height {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 .register {
-    width: 50%;
+  width: 50%;
 }
 
 .slick-slider {
@@ -57,17 +52,11 @@ body {
   overflow: visible !important;
 }
 
-.cryptodata {
-  width: 100% !important;
-  margin-left: 0;
-  margin-right: 0;
-}
-
 .card-crypto {
   min-height: 150px !important;
 }
 
-.sidebar{
+.sidebar {
   position: absolute;
   top: 0;
   left: 0;
@@ -76,7 +65,7 @@ body {
   z-index: 1600 !important;
   overflow: hidden;
   transform: translate(-100%);
-  transition: all 1s ease-in-out
+  transition: all 1s ease-in-out;
 }
 
 .show-side-bar {
@@ -96,7 +85,6 @@ body {
   background: rgb(54, 62, 199) !important;
 }
 
-
 @media screen and (max-width: 1023px) {
   body {
     background: rgb(87, 96, 214);
@@ -106,6 +94,10 @@ body {
   .nav {
     background: rgb(87, 96, 214) !important;
     color: white !important;
+  }
+
+  .intr0-text {
+    font-size: 1.2rem;
   }
 
   .image-logo {
@@ -119,28 +111,26 @@ body {
   }
 
   .card-cryptos:nth-child(4n + 1),
-.card-cryptos:nth-child(4n) {
-  background: rgb(136, 140, 207) !important;
-}
+  .card-cryptos:nth-child(4n) {
+    background: rgb(136, 140, 207) !important;
+  }
 
-.card-cryptos:nth-child(4n + 2),
-.card-cryptos:nth-child(4n + 3) {
-  background: rgb(54, 62, 199) !important;
-}
+  .card-cryptos:nth-child(4n + 2),
+  .card-cryptos:nth-child(4n + 3) {
+    background: rgb(54, 62, 199) !important;
+  }
 
   .intro-home {
     height: 400px;
   }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 400px) {
+  .card-cryptos:nth-child(odd) {
+    background: rgb(136, 140, 207) !important;
+  }
 
-.card-cryptos:nth-child(odd) {
-  background: rgb(136, 140, 207) !important;
-}
-
-.card-cryptos:nth-child(even) {
-  background: rgb(54, 62, 199) !important;
-}
-
+  .card-cryptos:nth-child(even) {
+    background: rgb(54, 62, 199) !important;
+  }
 }

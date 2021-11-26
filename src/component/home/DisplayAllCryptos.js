@@ -18,7 +18,7 @@ const AllCryptoData = () => {
   }
   return (
     <Container fluid className="cryptodata">
-      <Row w-100>
+      <Row>
         {
                Cryptos.slice(0, 50).map((item) => {
                  const {
@@ -26,10 +26,10 @@ const AllCryptoData = () => {
                  } = item;
                  const redClass = percent_change_1h < 0 ? 'text-danger' : 'text-success';
                  return (
-                   <Col key={id} xs={12} sm={6} md={6} lg={4} className=" card-cryptos p-3 text-center">
+                   <Col key={id} xs={12} md={6} lg={4} className=" card-cryptos py-3 text-center">
                      <Box onClick={() => dispatch(singleCrypto(id))}>
                        <Link to={`crypto/${symbol}`}>
-                         <Box as="h5" className="text-center text-success my-2">{name}</Box>
+                         <Box as="h5" className="text-success my-2">{name}</Box>
                          <Box as="h5">
                            {name}
                            &#125; USD
@@ -40,7 +40,7 @@ const AllCryptoData = () => {
 
                            </Box>
                          </Box>
-                         <Box as="h5" className="text-center text-success my-2">{symbol}</Box>
+                         <Box as="h5" className="text-success my-2">{symbol}</Box>
                        </Link>
                      </Box>
                    </Col>
