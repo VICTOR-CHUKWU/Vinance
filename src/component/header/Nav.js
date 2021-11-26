@@ -14,19 +14,21 @@ const Navigation = () => {
     <Container fluid className="bg-white nav my-0 p-2 shadow">
       <Row className=" p-3  mx-5">
         <Col xs={8} md={9} className="d-flex align-items-center">
-          <Link to="/" style={{ textDecoration: 'none' }}>
-            <Box as="span" className="d-flex align-items.center text-warning font-weight-bold ">
-              <Image
-                src={logo}
-                roundedCircle
-                width="30"
-                height="30"
-                className="mx-3"
-              />
-              Vinace
-            </Box>
-          </Link>
-          <AiOutlineMenu className="d-lg-none mx-4 icon-click" onClick={() => dispatch(openSidebar())} />
+          <Box className="d-flex align-items-center justify-content-between">
+            <Link to="/" style={{ textDecoration: 'none' }}>
+              <Box as="span" className="d-flex align-items.center text-warning font-weight-bold ">
+                <Image
+                  src={logo}
+                  roundedCircle
+                  width="30"
+                  height="30"
+                  className="mx-3"
+                />
+                Vinace
+              </Box>
+            </Link>
+            <AiOutlineMenu className=" d-inline d-lg-none mx-4 icon-click" onClick={() => dispatch(openSidebar())} />
+          </Box>
           <Box className="d-none d-lg-flex align-items-center mx-5">
             <Link to="/buy-crypto" style={{ textDecoration: 'none' }} className="mx-3">buy crypto</Link>
             <Link to="/market" style={{ textDecoration: 'none' }} className="mx-3">market</Link>

@@ -25,7 +25,7 @@ const Sidebar = () => {
               Vinace
             </Box>
           </Link>
-          <GiCancel onClick={() => dispatch(closeSidebar())} />
+          <GiCancel className="click-cancel" onClick={() => dispatch(closeSidebar())} />
         </Box>
 
         <Box className="d-flex flex-column align-items-center mx-5 my-3">

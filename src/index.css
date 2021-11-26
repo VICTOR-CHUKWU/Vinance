@@ -75,6 +75,12 @@ body {
 .icon-click {
   font-size: 2rem;
   color: rgb(32, 32, 155);
+  display: none;
+}
+
+.click-cancel {
+  color: red;
+  font-size: 2rem;
 }
 
 .card-cryptos:nth-child(odd) {
@@ -89,6 +95,12 @@ body {
   body {
     background: rgb(87, 96, 214);
     color: white;
+  }
+
+  .icon-click {
+    font-size: 2rem;
+    color: white;
+    display: inline-block;
   }
 
   .nav {

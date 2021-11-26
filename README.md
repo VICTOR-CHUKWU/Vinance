@@ -10,6 +10,9 @@ Crptocurrency App
 
 [Live Demo Link](https://vinance.netlify.app/)
 
+## video
+[video](https://www.loom.com/share/5f55a47f1df643e6bc7b67beb0081aa0)
+
 ## Built With
 - react
 - node, git
