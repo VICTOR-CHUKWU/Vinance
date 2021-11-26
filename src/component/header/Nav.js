@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import {
-  Image, Row, Col, Badge,
+  Image, Row, Col, Badge, Container,
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AiOutlineMenu } from 'react-icons/ai';
@@ -11,9 +11,9 @@ import { openSidebar } from '../../redux/action/SidebarAction';
 const Navigation = () => {
   const dispatch = useDispatch();
   return (
-    <Box className="container-fluid bg-white nav my-0 py-2 shadow">
+    <Container fluid w-100 className="bg-white nav my-0 py-2 shadow">
       <Row className="mx-0 mx-lg-3 my-2">
-        <Col xs={6} sm={8} md={9} className="d-flex align-items.center">
+        <Col xs={8} md={9} lg={9} className="d-flex align-items-center">
           <Link to="/" style={{ textDecoration: 'none' }}>
             <Box as="span" className="d-flex align-items.center text-warning font-weight-bold ">
               <Image
@@ -39,12 +39,12 @@ const Navigation = () => {
             <Link to="/about" style={{ textDecoration: 'none' }} className="mx-3">about</Link>
           </Box>
         </Col>
-        <Col xs={6} sm={4} md={3} className="d-flex align-items.center">
+        <Col xs={4} md={3} lg={3} className="d-none d-md-flex align-items-center text-center">
           <Link to="/account/register" style={{ textDecoration: 'none' }} className="mx-3 bg-warning rounded text-white p-1">Register</Link>
           <Link to="/account/login" style={{ textDecoration: 'none' }} className="mx-3">login</Link>
         </Col>
       </Row>
-    </Box>
+    </Container>
   );
 };
 

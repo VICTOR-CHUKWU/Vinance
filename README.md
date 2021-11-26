@@ -8,7 +8,7 @@ Crptocurrency App
 
 ## Live Demo
 
-<!-- [Live Demo Link](https://victor-calculator.netlify.app/) -->
+[Live Demo Link](https://vinance.netlify.app/)
 
 ## Built With
 - react

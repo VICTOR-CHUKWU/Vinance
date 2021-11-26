@@ -23,7 +23,7 @@ const CryptoData = () => {
     );
   }
   return (
-    <Container className="cryptodata my-5">
+    <Container className="cryptodata my-5 d-none d-lg-block">
       <Row>
         <Slider {...settings}>
           {

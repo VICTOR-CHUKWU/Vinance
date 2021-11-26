@@ -12,6 +12,11 @@ body {
   height: 450px;
 }
 
+/* .nav {
+  width: 100% !important;
+  margin: 0;
+} */
+
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -52,6 +57,12 @@ body {
   overflow: visible !important;
 }
 
+.cryptodata {
+  width: 100% !important;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .card-crypto {
   min-height: 150px !important;
 }
@@ -77,8 +88,12 @@ body {
   color: rgb(32, 32, 155);
 }
 
-.card-cryptos {
-  background: rgb(80, 83, 151) !important;
+.card-cryptos:nth-child(odd) {
+  background: rgb(136, 140, 207) !important;
+}
+
+.card-cryptos:nth-child(even) {
+  background: rgb(54, 62, 199) !important;
 }
 
 
@@ -102,7 +117,30 @@ body {
   .card-crypto {
     background: rgb(136, 140, 207) !important;
   }
+
+  .card-cryptos:nth-child(4n + 1),
+.card-cryptos:nth-child(4n) {
+  background: rgb(136, 140, 207) !important;
+}
+
+.card-cryptos:nth-child(4n + 2),
+.card-cryptos:nth-child(4n + 3) {
+  background: rgb(54, 62, 199) !important;
+}
+
   .intro-home {
     height: 400px;
   }
+}
+
+@media screen and (max-width: 400px){
+
+.card-cryptos:nth-child(odd) {
+  background: rgb(136, 140, 207) !important;
+}
+
+.card-cryptos:nth-child(even) {
+  background: rgb(54, 62, 199) !important;
+}
+
 }
