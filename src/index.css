@@ -8,13 +8,6 @@ body {
   position: relative;
 }
 
-/* .absolute-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
-} */
-
 .intro-home {
   height: 450px;
 }
@@ -38,13 +31,78 @@ body {
 
 .image-logo {
   animation: pulse 4.5s linear 2s infinite;
-}
-
-.cryptodata {
-  height: 50px;
-  overflow: hidden;
+  width: 550px;
+  height: 400px;
 }
 
 .pointer {
   cursor: pointer;
+}
+
+.min-height {
+    min-height: 100vh;
+}
+
+.register {
+    width: 50%;
+}
+
+.slick-slider {
+  min-height: 100px !important;
+  overflow: visible !important;
+}
+
+.card-crypto {
+  min-height: 150px !important;
+}
+
+.sidebar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1600 !important;
+  overflow: hidden;
+  transform: translate(-100%);
+  transition: all 1s ease-in-out
+}
+
+.show-side-bar {
+  transform: translate(0);
+}
+
+.icon-click {
+  font-size: 2rem;
+  color: rgb(32, 32, 155);
+}
+
+.card-cryptos {
+  background: rgb(80, 83, 151) !important;
+}
+
+
+@media screen and (max-width: 1023px) {
+  body {
+    background: rgb(87, 96, 214);
+    color: white;
+  }
+
+  .nav {
+    background: rgb(87, 96, 214) !important;
+    color: white !important;
+  }
+
+  .image-logo {
+    animation: pulse 4.5s linear 2s infinite;
+    width: 350px;
+    height: 200px;
+  }
+
+  .card-crypto {
+    background: rgb(136, 140, 207) !important;
+  }
+  .intro-home {
+    height: 400px;
+  }
 }

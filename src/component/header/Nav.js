@@ -1,45 +1,51 @@
+import { useDispatch } from 'react-redux';
 import {
   Image, Row, Col, Badge,
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { AiOutlineMenu } from 'react-icons/ai';
 import Box from '../../shared/Box';
 import logo from '../../img/logo.jpg';
+import { openSidebar } from '../../redux/action/SidebarAction';
 
-const Header = () => (
-  <Box className="container-fluid bg-white my-0 py-2 shadow">
-    <Row className="mx-5 my-2">
-      <Col md={9} className="d-flex align-items.center">
-        <Link to="/" style={{ textDecoration: 'none' }}>
-          <Box as="span" className="d-flex align-items.center text-warning font-weight-bold ">
-            <Image
-              src={logo}
-              roundedCircle
-              width="30"
-              height="30"
-              className="mx-3"
-            />
-            Vinace
-          </Box>
-        </Link>
-
-        <Box className="d-flex align-items-center mx-5">
-          <Link to="/" style={{ textDecoration: 'none' }} className="mx-3">buy crypto</Link>
-          <Link to="/" style={{ textDecoration: 'none' }} className="mx-3">market</Link>
-          <Link to="/" style={{ textDecoration: 'none' }} className="mx-3">trade</Link>
-          <Link to="/" style={{ textDecoration: 'none' }} className="mx-3">
-            finance
-            {' '}
-            <Badge bg="warning">new</Badge>
+const Navigation = () => {
+  const dispatch = useDispatch();
+  return (
+    <Box className="container-fluid bg-white nav my-0 py-2 shadow">
+      <Row className="mx-0 mx-lg-3 my-2">
+        <Col xs={6} sm={8} md={9} className="d-flex align-items.center">
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <Box as="span" className="d-flex align-items.center text-warning font-weight-bold ">
+              <Image
+                src={logo}
+                roundedCircle
+                width="30"
+                height="30"
+                className="mx-3"
+              />
+              Vinace
+            </Box>
           </Link>
-          <Link to="/" style={{ textDecoration: 'none' }} className="mx-3">about</Link>
-        </Box>
-      </Col>
-      <Col md={3} className="d-flex align-items.center">
-        <Link to="/" style={{ textDecoration: 'none' }} className="mx-3 bg-warning rounded text-white p-1">Register</Link>
-        <Link to="/" style={{ textDecoration: 'none' }} className="mx-3">login</Link>
-      </Col>
-    </Row>
-  </Box>
-);
+          <AiOutlineMenu className="d-lg-none mx-4 icon-click" onClick={() => dispatch(openSidebar())} />
+          <Box className="d-none d-lg-flex align-items-center mx-5">
+            <Link to="/buy-crypto" style={{ textDecoration: 'none' }} className="mx-3">buy crypto</Link>
+            <Link to="/market" style={{ textDecoration: 'none' }} className="mx-3">market</Link>
+            <Link to="/trade" style={{ textDecoration: 'none' }} className="mx-3">trade</Link>
+            <Link to="/finance" style={{ textDecoration: 'none' }} className="mx-3">
+              finance
+              {' '}
+              <Badge bg="warning">new</Badge>
+            </Link>
+            <Link to="/about" style={{ textDecoration: 'none' }} className="mx-3">about</Link>
+          </Box>
+        </Col>
+        <Col xs={6} sm={4} md={3} className="d-flex align-items.center">
+          <Link to="/account/register" style={{ textDecoration: 'none' }} className="mx-3 bg-warning rounded text-white p-1">Register</Link>
+          <Link to="/account/login" style={{ textDecoration: 'none' }} className="mx-3">login</Link>
+        </Col>
+      </Row>
+    </Box>
+  );
+};
 
-export default Header;
+export default Navigation;

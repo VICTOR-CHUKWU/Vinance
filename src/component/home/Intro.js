@@ -7,7 +7,7 @@ import logo from '../../img/crypo-paper.png';
 const Intro = () => (
   <Box className="mt-5 px-4 intro-home">
     <Row>
-      <Col md={6} className="text-center">
+      <Col xs={12} sm={6} md={6} className="text-center">
         <Box as="h1" className="text-center my-5">
           Buy and Sell Crypto Easy
         </Box>
@@ -15,13 +15,11 @@ const Intro = () => (
           <Button variant="warning" size="lg" className="w-50">Register</Button>
         </Box>
       </Col>
-      <Col md={6}>
-        <Box className="position-relative relative">
+      <Col xs={12} sm={6} md={6}>
+        <Box className="position-relative relative text-center my-3 my-lg-0">
           <Image
             src={logo}
             rounded
-            width="550"
-            height="400"
             className="image-logo"
           />
         </Box>

@@ -14,7 +14,7 @@ const StayInTouch = () => (
                 key, title, text, icon,
               } = item;
               return (
-                <Col key={key}>
+                <Col key={key} xs={12} sm={6} lg={3}>
                   <Box className="text-center">
                     <Box style={{ fontSize: '2em', color: 'orange' }}>{icon}</Box>
                     <Box as="h5">{title}</Box>

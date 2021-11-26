@@ -1,5 +1,5 @@
+/* eslint-disable react/no-children-prop */
 /* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-props-no-spreading */
 import {
   useState, useEffect, memo, createElement,
 } from 'react';
@@ -16,7 +16,7 @@ const Box = ({
   if (dynamic && !rendered) return <></>;
 
   if (Component) {
-    return <Component {...props}>{children}</Component>;
+    return <Component prop={props}>{children}</Component>;
   }
   return createElement(as || 'div', {
     ...props,

@@ -5,7 +5,7 @@ import { displayDta } from '../../Data';
 import Box from '../../shared/Box';
 
 const DisplayCards = () => (
-  <Container className="my-4">
+  <Container className="my-5 d-none d-lg-block">
     <Row>
       {
                    displayDta.map((item) => {
