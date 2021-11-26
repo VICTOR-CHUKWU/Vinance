@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Col, Container, Row } from 'react-bootstrap';
@@ -21,26 +20,23 @@ const AllCryptoData = () => {
       <Row>
         {
                Cryptos.slice(0, 50).map((item) => {
-                 const {
-                   name, symbol, id, percent_change_1h,
-                 } = item;
-                 const redClass = percent_change_1h < 0 ? 'text-danger' : 'text-success';
+                 const redClass = item.percent_change_1h < 0 ? 'text-danger' : 'text-success';
                  return (
-                   <Col key={id} xs={12} md={6} lg={4} className=" card-cryptos py-3 text-center">
-                     <Box onClick={() => dispatch(singleCrypto(id))}>
-                       <Link to={`crypto/${symbol}`}>
-                         <Box as="h5" className="text-success my-2">{name}</Box>
+                   <Col key={item.id} xs={12} md={6} lg={4} className=" card-cryptos py-3 text-center">
+                     <Box onClick={() => dispatch(singleCrypto(item.id))}>
+                       <Link to={`crypto/${item.symbol}`}>
+                         <Box as="h5" className="text-success my-2">{item.name}</Box>
                          <Box as="h5">
-                           {name}
+                           {item.name}
                            &#125; USD
                            {' '}
                            <Box as="span" className={redClass}>
-                             {percent_change_1h}
+                             {item.percent_change_1h}
                              %
 
                            </Box>
                          </Box>
-                         <Box as="h5" className="text-success my-2">{symbol}</Box>
+                         <Box as="h5" className="text-success my-2">{item.symbol}</Box>
                        </Link>
                      </Box>
                    </Col>

@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import { useSelector } from 'react-redux';
 import { Container, Row, Col } from 'react-bootstrap';
 import Box from '../../shared/Box';
@@ -12,14 +11,10 @@ const Crypto = () => {
       <Box>Loading...</Box>
     );
   }
-  const {
-    name, symbol,
-    price_btc, price_usd, tsupply,
-    percent_change_1h, percent_change_24h, percent_change_7d,
-  } = payload;
-  const redClass = percent_change_1h < 0 ? 'text-danger' : 'text-success';
-  const redClass2 = percent_change_24h < 0 ? 'text-danger' : 'text-success';
-  const redClass3 = percent_change_7d < 0 ? 'text-danger' : 'text-success';
+
+  const redClass = payload.percent_change_1h < 0 ? 'text-danger' : 'text-success';
+  const redClass2 = payload.percent_change_24h < 0 ? 'text-danger' : 'text-success';
+  const redClass3 = payload.percent_change_7d < 0 ? 'text-danger' : 'text-success';
   return (
     <Container className="min-height">
       <Row>
@@ -28,17 +23,17 @@ const Crypto = () => {
             <Box as="h4">
               Name:
               {' '}
-              {name}
+              {payload.name}
             </Box>
             <Box as="h4">
               Symbol:
               {' '}
-              {symbol}
+              {payload.symbol}
             </Box>
             <Box as="h4">
               Total supply:
               {' '}
-              {tsupply}
+              {payload.tsupply}
             </Box>
           </Box>
         </Col>
@@ -47,19 +42,19 @@ const Crypto = () => {
             <Box as="h4">
               Price per BTC:
               {' '}
-              {price_btc}
+              {payload.price_btc}
             </Box>
             <Box as="h4">
               Price per USD:
               {' '}
-              {price_usd}
+              {payload.price_usd}
             </Box>
             <Box as="h4">
               {' '}
               Change per hour:
               {' '}
               <Box as="span" className={redClass}>
-                {percent_change_1h}
+                {payload.percent_change_1h}
                 %
 
               </Box>
@@ -69,7 +64,7 @@ const Crypto = () => {
               Change per day:
               {' '}
               <Box as="span" className={redClass2}>
-                {percent_change_24h}
+                {payload.percent_change_24h}
                 %
 
               </Box>
@@ -79,7 +74,7 @@ const Crypto = () => {
               Change per week:
               {' '}
               <Box as="span" className={redClass3}>
-                {percent_change_7d}
+                {payload.percent_change_7d}
                 %
 
               </Box>

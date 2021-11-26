@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import { Container, Table } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import Box from '../../shared/Box';
@@ -28,16 +27,13 @@ const MarketTrend = () => {
               <tbody>
                 {
            Cryptos.slice(0, 10).map((item) => {
-             const {
-               name, symbol, id, percent_change_1h,
-             } = item;
-             const redClass = percent_change_1h < 0 ? 'text-danger' : 'text-success';
+             const redClass = item.percent_change_1h < 0 ? 'text-danger' : 'text-success';
              return (
-               <tr key={id}>
-                 <td>{name}</td>
-                 <td>{symbol}</td>
+               <tr key={item.id}>
+                 <td>{item.name}</td>
+                 <td>{item.symbol}</td>
                  <td className={redClass}>
-                   {percent_change_1h}
+                   {item.percent_change_1h}
                    %
                  </td>
                </tr>
