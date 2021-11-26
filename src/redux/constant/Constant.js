@@ -1,0 +1,10 @@
+export const CryptoConst = {
+  FETCH_CRYPTO: 'FETCH_CRYPTO',
+  FETCH_ONE_CRYPTO: 'FETCH_ONE_CRYPTO',
+  FILTER_CRYPTOS: 'FILTER_CRYPTOS',
+};
+
+export const SideBarActions = {
+  CLOSE_SIDEBAR: 'CLOSE_SIDEBAR',
+  OPEN_SIDEBAR: ' OPEN_SIDEBAR',
+};
